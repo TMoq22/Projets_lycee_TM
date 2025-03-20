@@ -2,6 +2,14 @@
 ## Présentation du projet Flask
 Ce projet a été réalisé dans le cadre de la spécialité NSI. Il consiste en la création d'une application web le module Python : Flask.
 
+> [!WARNING]
+> Le Projet est toujours en cours de réalisation certain element sont donc susceptible de ne pas fonctionner
+> Le code n'est pas encore bien commenter et organiser
+> Des modifications serons apporter des que possible 
+
+> [!NOTE]
+> Note du projet ...
+
 ## Technologies utilisées
 - **Langages** : Python (Flask), HTML, CSS, JavaScript
 - **Base de données** : SQLite, SQL
