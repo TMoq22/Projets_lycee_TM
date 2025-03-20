@@ -26,4 +26,8 @@ Ce projet a été réalisé dans le cadre de la spécialité NSI. Il consiste en
    python : main.py
 2. Accéder à l'application via `http://127.0.0.1:5008/`
 
-> Titouan Moquet 2025
+## Crédits
+- Développement : Titouan Moquet 
+- Année scolaire : Term 2024-2025
+
+> Version : V2.1
