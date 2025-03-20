@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contacts
+{% endblock %}
+
+{% block contenu %}
+<div class="titleh2">
+    <h2>Ajouter un processeur</h2>
+</div>
+
+<div class="insert_value">
+    
+    <form method="post" action="{{ url_for('check_insert_value') }}">
+        
+        <!-- Manufacturer -->
+        <label for="manufacturer">Manufacturer:</label>
+        <input type="text" id="manufacturer" name="manufacturer" required>
+        <br>
+        <!-- Model -->
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" required>
+        <br>
+        <!-- Microarch -->
+        <label for="microarch">Microarchitecture:</label>
+        <input type="text" id="microarch" name="microarch" required>
+        <br>
+        <!-- Family -->
+        <label for="family">Family:</label>
+        <input type="text" id="family" name="family" required>
+        <br>
+        <!-- Codename -->
+        <label for="codename">Codename:</label>
+        <input type="text" id="codename" name="codename" required>
+        <br>
+        <!-- Fab -->
+        <label for="fab">Fab:</label>
+        <input type="text" id="fab" name="fab" required>
+        <br>
+        <!-- Frequency -->
+        <label for="frequency">Frequency (MHz):</label>
+        <input type="number" id="frequency" name="frequency" min="0" max="10000" required>
+        <br>
+        <!-- L2 Cache -->
+        <label for="l2_units">L2 Units:</label>
+        <input type="number" id="l2_units" name="l2_units" min="0" required>
+        <br>
+        <label for="l2_unit_size">L2 Unit Size (KB):</label>
+        <input type="number" id="l2_unit_size" name="l2_unit_size" min="0" required>
+        <br>
+        <label for="l2_total">L2 Total (KB):</label>
+        <input type="number" id="l2_total" name="l2_total" min="0" required>
+        <br>
+        <!-- L3 Cache -->
+        <label for="l3_cache">L3 Cache (MB):</label>
+        <input type="number" id="l3_cache" name="l3_cache" min="0" required>
+        <br>
+        <!-- Cores and Threads -->
+        <label for="cores">Cores:</label>
+        <input type="number" id="cores" name="cores" min="0" required>
+        <br>
+        <label for="threads">Threads:</label>
+        <input type="number" id="threads" name="threads" min="0" required>
+        <br>
+        <!-- TDP -->
+        <label for="tdp_min">TDP Min (W):</label>
+        <input type="number" id="tdp_min" name="tdp_min" min="0" required>
+        <br>
+        <label for="tdp_max">TDP Max (W):</label>
+        <input type="number" id="tdp_max" name="tdp_max" min="0" required>
+        <br>
+        <!-- Socket -->
+        <label for="socket">Socket:</label>
+        <input type="text" id="socket" name="socket" required>
+        <br>
+        <!-- Year -->
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" min="1990" max="2100" required>
+        <br>
+        <!-- Part Number -->
+        <label for="part_number">Part Number:</label>
+        <input type="text" id="part_number" name="part_number" required>
+        <br>
+        <!-- X86_64 -->
+        <label for="x86_64">X86_64:</label>
+        <input type="checkbox" id="x86_64" name="x86_64">
+        <br>
+        <!-- Instruction Sets -->
+        <label for="sse">SSE:</label>
+        <input type="checkbox" id="sse" name="sse">
+        <br>
+        <label for="avx">AVX:</label>
+        <input type="checkbox" id="avx" name="avx">
+        <br>
+        <label for="avx2">AVX2:</label>
+        <input type="checkbox" id="avx2" name="avx2">
+        <br>
+        <!-- GPU -->
+        <label for="gpu_present">GPU Present:</label>
+        <input type="checkbox" id="gpu_present" name="gpu_present">
+        <br>
+        <label for="gpu_model">GPU Model:</label>
+        <input type="text" id="gpu_model" name="gpu_model">
+        <br>
+        <!-- Graphics APIs -->
+        <label for="directx">DirectX:</label>
+        <input type="text" id="directx" name="directx">
+        <br>
+        <label for="opengl">OpenGL:</label>
+        <input type="text" id="opengl" name="opengl">
+        <br>
+        <label for="opencl">OpenCL:</label>
+        <input type="text" id="opencl" name="opencl">
+        <br>
+        <label for="vulkan">Vulkan:</label>
+        <input type="text" id="vulkan" name="vulkan">
+        <br>
+        <button type="submit">Insert</button>
+    </form>
+        
+        
+</div>
+{% endblock %}
+
+ 
+ 
+ 
+ 

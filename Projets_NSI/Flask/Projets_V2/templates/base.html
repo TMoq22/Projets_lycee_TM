@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+       <!-- <link href="{{ url_for('static', filename='font_awesome_css_local.css') }}" rel="stylesheet" type="text/css"> -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" type="text/css">
+        
+        <link rel="icon" href="{{ url_for('static', filename='icon.png') }}"/>
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    
+    
+    <body>
+        <header>
+            <div class = "nav_bar">
+                <div class = "title">
+                    <h1>PC COMPOSANTS SEARCH </h1>
+                </div>
+                <div  class = "link" >
+                    <nav>
+                        <li><a class="active" role="button" href="{{ url_for('index') }}"><i class="fa-solid fa-house"></i> HOME</a></li>
+                        <li><a class="active" role="button" href="{{ url_for('searchCPU') }}"><i class="fa-solid fa-microchip"></i> CPU</a></li>
+                        <li><a class="active" role="button" href="{{ url_for('searchGPU') }}"><i class="fa-solid fa-microchip"></i> GPU</a></li>
+                        {% if session['autorisation'] == 0 %} 
+                            <li><a class="active" role="button" href="{{ url_for('add_cpu') }}"><i class="fa-solid fa-plus"></i> add cpu</a></li>
+                            <li><a class="active" role="button" href="{{ url_for('add_gpu') }}"><i class="fa-solid fa-plus"></i> add gpu</a></li>
+                        {% endif %}
+                        <li style="float:right"><a class="active" role="button" href="{{ url_for('login') }}"><i  class="fa-solid fa-user" {% if session['pseudo'] %} style="color: #2c87c3;" {% endif %} ></i></a></li> <!--style="color: #ffffff;""-->
+                        <li style="float:right"><a class="active" role="button" href="{{ url_for('contact') }}">ABOUT US</a></li>
+                        
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+
+        {% block contenu %}
+
+        {% endblock %}
+        <footer class = "footers"> 
+            <br>
+            {% block footer %}
+            {% endblock %}
+            <br>
+            <p>2024-2025</p>
+        </footer>
+
+        <script src="static\js.js"></script>
+    </body>
+</html>
+
+

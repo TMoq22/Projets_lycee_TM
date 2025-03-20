@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}
+CPU search
+{% endblock %}
+
+{% block contenu %}
+<div class="titleh2">
+    <h2>Rechercher un processeur</h2>
+</div>
+
+{% if resultats %}
+    <span id="totalResults" data-total="{{ resultats|length }}" style="display: none;"></span>
+    <span id="currentLimit" data-limit="10" style="display: none;"></span>
+{% else %}
+    <span id="totalResults" data-total="0" style="display: none;"></span>
+{% endif %}
+
+<div class="filtre_de_recherche">
+    <form method="post" action="{{ url_for('check_filtre') }}">
+        
+        <p>marques disponibles: {% if marques %}{% for marque in marques %}{{marque[0]}} {% endfor %}{% endif %}</p>
+
+        <label for="filtre">Recherche :</label>
+        <input type="text" id="filtre" name="filtre" {% if filtres[0] != '' %} value ='{{ filtres[0] }}' {% endif %} required>
+        <br>
+        <button id="button_submit" type="submit">Rechercher</button>
+    </form>
+</div>
+
+<div id = "resultats">
+    
+    {% if resultats %}
+        <p>{{ resultats|length }} resultats </p>
+    {% endif %}
+
+    <!-- affichage des resultats  -->
+    <table>
+        <tbody>
+            <tr>
+                <th scope="col">Manufacturer</th>
+                <th scope="col">Name</th>
+                <th scope="col">Launch Date</th>
+                <th scope="col">Cores</th>
+                <th scope="col">Socket</th>
+                <th scope="col">More info</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+            {% if resultats %}
+                {% for result in resultats[:max_items] %}
+                <tr>
+                    <td>{{ result[0] }}</td>
+                    <td>{{ result[1] }}</td>
+                    <td>{{ result[2] }}</td>
+                    <td> {{ result[3] }}</td>
+                    <td>{{ result[4] }}</td>
+                    <td><a href="{{ url_for('info_cpu', item_name = result[1],producter = result[0] )}}">more info</a></td>
+                    <td><img src="{{ url_for('static', filename='not_found_img.png') }}" alt="texte alternatif" width=10% height=10%/></td> 
+                    
+                    {% if favoris_list %}
+                        {% if result[1] in favoris_list %} 
+                            <td>
+                                <form action="{{ url_for('toggle_favorite', item_name=result[1]) }}" method="POST">
+                                    <button type="submit" class="btn btn-link"><i class="fa-solid fa-heart"></i></button>
+                                </form>
+                            </td>
+                        {% else %}
+                            <td>
+                                <form action="{{ url_for('toggle_favorite', item_name=result[1]) }}" method="POST">
+                                    <button type="submit" class="btn btn-link"><i class="fa-regular fa-heart"></i></button>
+                                </form>
+                            </td>
+                        {% endif %}
+                    
+                    {% else %}
+                        <td>
+                            <form action="{{ url_for('toggle_favorite', item_name=result[1]) }}" method="POST">
+                                <button type="submit" class="btn btn-link"><i class="fa-regular fa-heart"></i></button>
+                            </form>
+                        </td>
+                    {% endif %}
+
+                </tr>
+                {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+    <button id="loadMoreBtn">Afficher plus</button>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+
+
+
