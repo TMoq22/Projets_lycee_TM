@@ -30,4 +30,4 @@ Ce projet a été réalisé dans le cadre de la spécialité NSI. Il consiste en
 - Développement : Titouan Moquet 
 - Année scolaire : Term 2024-2025
 
-> Version : V2.1
+> Version : V2.2 (voir release note)
