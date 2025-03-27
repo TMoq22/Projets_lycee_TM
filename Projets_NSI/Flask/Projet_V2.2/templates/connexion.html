@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block titre %}
+connexion
+{% endblock %}
+
+{% block contenu %}
+<div class="titleh2">
+    <h2>connexion</h2>
+</div>
+
+
+<!--
+<div id="login_form">
+    <form method="post" action="{{ url_for('check_login') }}">
+        
+        <label for="pseudo">Pseudo:</label><br>
+        <input type="text" id="pseudo" name="pseudo" required><br><br>
+        <label for="password">Mot de passe:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Se connecter">
+
+        <div id="required_info">
+            <p>* -> required</p>
+        </div>
+    </form> 
+</div> -->
+
+
+<div class="login-container">
+    <h2>Connexion</h2>
+    <form method="post" action="{{ url_for('check_login') }}">
+        <input type="text" id="pseudo" name="pseudo" placeholder="Nom d'utilisateur" required>
+        <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+        <button type="submit">Se connecter</button>
+    </form>
+    <a href="#">inscription</a>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}
+PC compar
+{% endblock %}
+
+
+{% block contenu %}
+<div  id="chose_action_login" >
+
+    {% if session['pseudo'] %}
+        <span> vous êtes connecté en tant que : {{ session['pseudo'] }} !</span>    
+    {% endif %}
+    {% if session['pseudo'] %}
+
+        <nav>
+            {% if session['pseudo'] %}
+                <li><a class="active" role="button" href="{{ url_for('disconnect') }}">se déconnecter</a></li>
+                
+
+                {% if session['autorisation'] == 0 %}
+                    <li style="float:right" ><a class="active" role="button" href="{{ url_for('administrateur') }}">admin</a></li>
+                {% endif %}
+            {% endif %}
+        </nav>
+    
+    {% else %}
+    <div class="login-container">
+        <h2>Connexion</h2>
+        <form method="post" action="{{ url_for('check_login') }}">
+            <input type="text" id="pseudo" name="pseudo" placeholder="Nom d'utilisateur" required>
+            <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <a href="{{ url_for('inscription') }}">inscription</a>
+    </div>
+    {% endif %}
+
+    {% if session['pseudo'] %}
+        <a class="button_unsubscribe" role="button" href="{{ url_for('delete') }}">unsubscribe</a>
+    {% endif %}
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+
+
+{% endblock %}

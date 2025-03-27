@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}
+item info
+{% endblock %}
+
+
+{% block contenu %}
+    
+    <!-- affichage des resultats  -->
+
+        
+    {% if resultats %}
+        {% for msg in resultats %}
+            <div class="titleh2">
+                <h2>information sur la carte graphiques {{ msg[1] }} {{ msg[2] }}</h2>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <div class ="warning">
+        <p class="warning">problème ordre affichage des elements ! </p>
+    </div>
+    <div id="block_info">
+        <div id="block_item_info">
+            <table>
+                <tbody>
+                    {% if resultats %}
+                        {% for msg in resultats %}
+                            {% for column in columns %}
+                                <tr>
+                                    <td>{{ column }}</td>  <!-- Affiche le nom de la colonne -->
+                                    <td>{{ msg[loop.index] }}</td>  <!-- Affiche la valeur correspondante -->
+                                </tr>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    
+
+        <div id = "block_img">
+                <img src="{{ url_for('static', filename='not_found_img.png') }}" alt="texte alternatif" width=30% height=30%/></td> 
+        </div>
+
+    </div>
+            
+
+
+
+            
+
+
+
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}
