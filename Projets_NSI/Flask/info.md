@@ -3,12 +3,12 @@
 Ce projet a été réalisé dans le cadre de la spécialité NSI. Il consiste en la création d'une application web le module Python : Flask.
 
 > [!WARNING]
-> Le Projet est toujours en cours de réalisation certain element sont donc susceptible de ne pas fonctionner
-> Le code n'est pas encore bien commenter et organiser
-> Des modifications serons apporter des que possible 
+> Le Projet est toujours en cours de réalisation certains elements sont donc susceptibles de ne pas fonctionner
+> Le code n'est pas encore bien commenté et organisé
+> Des modifications seront apportées des que possible 
 
 > [!NOTE]
-> Note du projet ...
+> Note du projet (à venir)
 
 ## Technologies utilisées
 - **Langages** : Python (Flask), HTML, CSS, JavaScript
