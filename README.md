@@ -13,7 +13,7 @@ aperçu des projets que j'ai eu l'occasion de faire dans en NSI (et en arts plas
 
 ## Arts plastique 
 1. Bande Dessinée sur le thème de l'immigration
-2. D'autre dessin que j'ai pu realiser
+2. D'autre dessin que j'ai pu realiser (je vais les ajouters prochainement)
 
 > [!NOTE]
 > + Des mises a jours du projets Flask serons disponible dans la branche `updates`  
@@ -24,4 +24,4 @@ Lycée Auguste Pavie - Guingamp \
 Titouan Moquet \
 2025
 
-> derniere modification : 27/03/2025
+> derniere modification : 03/04/2025
