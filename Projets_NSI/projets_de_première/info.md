@@ -5,7 +5,7 @@
 - bandit manchot -> projet python
 - pizzeria -> projet javascript 
 
-> :warning:  il est possibles que les codes comporte des bugs ou autre problemes je ne suis pas sur que ce sont les versions finales 
+> :warning:  il est possible que les codes comportent des bugs ou autres problemes je ne suis pas sur que se soit les versions finales 
 
 ## Crédits
 - Développement : Titouan Moquet 
