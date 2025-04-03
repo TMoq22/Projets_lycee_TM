@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="fr"> 
+	<head>
+		<meta charset="utf-8"/>
+		<title>Livreur de Pizza</title>
+		<link href="pizza.css" rel="stylesheet" type="text/css"/>
+		<link rel="icon" href="logo.png"/>
+	</head>
+	<body>
+		<div id="bienvenue">
+			<div class = "vert">Bienvenue </div> <div class="blanc">à la </div><div class = "rouge">pizzeria</div>
+			<div class = "menu">
+				<div>
+					<p>Votre identité :</p>
+					<label>Prenom : </label><input type="text" id= "perso_prenom" name="perso_prenom" value="Leonardo">
+					<label>Nom : </label><input type="text" id="perso_nom" name="perso_nom" value="Pizzaïolo">
+				</div>
+				<div class="identite">
+					<output id = "salaire_output" for="Carac"></output>
+					<input type="range" name="Carac" id="Carac" min="-10" max="10" step="1" value="0" />
+					<output id="temps_output" for="Carac"></output>
+				</div>
+				<div>
+					<button id="soumettre" type="button" onclick="get_carac()">Enregistrer</button>
+				</div>
+			</div>
+			<img class ="logo" src ="pizzachef.png" alt="Pizzeria">
+			
+			
+			
+			
+			<div id = "easter_egg">
+					<p1>click here</p1>
+			</div>
+			
+			
+			
+			
+			
+			
+		</div>
+		
+		<div id ="jeu">
+			<div id="story">
+				<div id ="perso">
+					<ul id="carac_perso">
+					<li><input alt="home" type="image" id="Home_bouton" onclick="home()" src="icon_home.png"/></li>
+					<li>Prenom : <span id="prenom"></span></li>
+					<li>Nom : <span id="nom"></span></li>
+					<li>Salaire : <span id="salaire"></span></li>
+					<li>Temps : <span id="temps"></span></li>
+					<li>Argent : <span id="argent"></span></li>
+					<li>Maison : <span id="maison_total"></span></li>
+					</ul>
+				</div>
+				<div id ="text">
+						
+				</div>
+				<div id="choices">
+
+				</div>
+				<div id = "map">
+					<img id ="pizzaland" src ="pizzaland.png" alt="Pizzaland">
+				</div>
+				
+			</div>	
+		</div>
+		<div id ="Easter_egg">
+			<img src="rickroll-roll.gif" alt="Never Gonna Give You Up rickroll" >
+
+		</div>
+			
+		<script src="pizzeria.js">
+		
+		</script>
+</body>
+</html>

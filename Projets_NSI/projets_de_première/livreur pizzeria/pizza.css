@@ -1,0 +1,162 @@
+body{
+	background-color: #fbfbc1;
+}
+/*css pour tout les bouttons*/
+button{
+	padding: 4px 15px;
+	font-size: 1.5rem;
+	cursor: pointer;
+	border: 0px;
+	background: transparent;
+	position: relative;
+	transition: all .2s;
+	overflow: hidden;
+	color: #fff;
+	border-radius: 10px;
+  
+  
+}
+	
+button::after {
+	content: '';
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	top: -50px;
+	left: -100px;
+	background-image: linear-gradient(225deg, #27d86c 0%,#66ff33  50%, #2db300 100%);
+	z-index: -1;
+	transition: all .5s;
+}
+button:hover::after {
+	transform: rotate(150deg);
+}
+
+button:hover {
+	transform: translate(0,-6px);
+  
+}
+
+
+#soumettre{
+	margin-top: 20px;
+	margin-left: 10vw ;
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+	border-radius: 5px;
+	border: none;
+	background-color: green;
+	text-align: center;
+	cursor: pointer;
+	transition: transform .1s;
+}
+#Home_bouton{
+
+	width: 62px; 
+	border-radius: 9px;
+	border: none;
+	list-style-type: none;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+
+input{
+	font-size: 0.8em;
+	border-radius: 6px; 
+	border-style:none ;
+	padding: 5px;
+}
+	
+
+
+input:hover{
+	background-color:#ccffcc;
+}
+
+
+
+/*css pour le reste */	
+}
+#jeu{
+	margin-left: 10px;
+}
+#text{
+	font-family: cursive ;
+	font-size: 20px;
+}
+
+#map img{
+	width : 260px;
+	height : 260px;
+	border-radius: 10px;
+}
+
+.menu {
+	background-color : darkgreen;
+	border-radius: 10px;
+	padding:  30px;
+	color: white;
+	font-size: 1.5rem;
+	padding-top: 7px;
+	font-family: cursive;
+}
+
+.logo {
+	margin : 15px;
+}
+
+.vert {
+	color : green;
+	text-shadow: 1px 1px 2px black;
+	font-size: 4rem;
+	text-align: center;
+	border-left: 10px solid;
+	border-right: 10px solid;
+	margin-left: 680px;
+	margin-right: 580px;
+}
+.blanc{
+	color: white;
+	text-shadow: 1px 1px 2px black;
+	font-size: 3.3rem;
+	text-align: center;
+	border-left: 10px solid;
+	border-right: 10px solid;
+	margin-left: 680px;
+	margin-right: 580px;
+}
+.rouge{
+	color: red;
+	text-shadow: 1px 1px 2px black;
+	font-size: 4rem;
+	text-align: center;
+	margin-bottom: 20px;
+	border-left: 10px solid;
+	border-right: 10px solid;
+	margin-left: 680px;
+	margin-right: 580px;
+}
+
+
+#perso{
+	text-shadow: 1px 1px 2px black;
+	color: white;
+	background-color: #ec4200;
+	border-radius: 10px;
+	padding-block: 1px;
+	font-size: 20px;
+}
+
+p1{
+	background-color: #fbfbc1;
+	color: #fbfbc1;
+}
+p1:hover{
+	color: #f7f787;
+	cursor :pointer;
+}
+#Easter_egg{
+	display:none;
+}
