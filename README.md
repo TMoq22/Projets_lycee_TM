@@ -12,6 +12,7 @@ aperçu des projets que j'ai eu l'occasion de faire dans en NSI (et en arts plas
 > (le projet Flask est toujours en cours de realisation)
 
 ## Arts plastique 
+0. Projets de première
 1. Bande Dessinée sur le thème de l'immigration
 2. D'autre dessin que j'ai pu realiser (je vais les ajouters prochainement)
 
