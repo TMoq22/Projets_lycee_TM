@@ -4,7 +4,7 @@
 PyFight Legends est un jeu développé en Python à l'aide de la bibliothèque Pygame. Ce projet a été réalisé dans le cadre de la spécialité NSI.
 
 > [!WARNING]
-> Penser a couper le son de votre ordinateur le son du jeu est insuportable et on a oublié de faire un boutton pour le couper :)
+> Penser a couper le son de votre ordinateur le son du jeu est insupportable et on a oublié de faire un bouton pour le couper :)
 
 > [!NOTE]
 > Note du projet 18/20 
