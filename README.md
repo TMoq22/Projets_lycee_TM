@@ -17,6 +17,7 @@ aperçu des projets que j'ai eu l'occasion de faire dans en NSI (et en arts plas
 1. Bande Dessinée sur le thème de l'immigration
 2. D'autre dessin que j'ai pu realiser
 
+##  
 > [!NOTE]
 > + Des mises a jours plus régulière du projets Flask serons disponible dans la branche `updates` (version actuel 2.3)
 > + Des readme.md et info.md sont présent pour apporter des informations utiles, pour une meilleur visualisation avec la mise en page je vous conseil des les lire depuis GitHub
