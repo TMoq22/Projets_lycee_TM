@@ -12,6 +12,8 @@ mise a jours du projets Flask
 ## modifications
 - amélioration css 
 - modification de la page 'about us'
+- changement nom base de données `chat.db` -> `user.db`
+- nettoyage code python 
 
 ## Crédits
 - Développement : Titouan Moquet 
