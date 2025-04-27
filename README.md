@@ -9,14 +9,21 @@ mise a jours du projets Flask
 > Le code n'est pas encore bien commenté et organisé
 > Des modifications seront apportées dès que possible 
 
-## modifications
+## modifications (comparaison V2) 
 - amélioration css 
 - modification de la page 'about us'
 - changement nom base de données `chat.db` -> `user.db`
-- nettoyage code python 
+- nettoyage code python
+- ajout de page d'erreur personnalisé 
+- modification css page `about us`
+- ajout d'une page d'erreur pour restreindre l'acces à certaines ressources `add_cpu` `add_gpu` `administrateur` si l'utilisateur ne possede pas les permissions requises 
+- ajout d'un bouton 'back to top'
+- ajout de 'title' pour certain bouton de la nav bar
+  
 
 ## Crédits
 - Développement : Titouan Moquet 
 - Année scolaire : Term 2024-2025
 
-> Version : V2.2 
+> Version : V2.3.2 (V2.4 serais plus approprié mais erreur de nommage)
+
