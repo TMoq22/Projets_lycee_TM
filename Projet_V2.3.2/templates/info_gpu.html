@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}
+item info
+{% endblock %}
+
+
+{% block contenu %}
+    
+    <!-- affichage des resultats  -->
+
+        
+    {% if resultats %}
+        {% for msg in resultats %}
+            <div class="titleh2">
+                <h2>information sur la carte graphiques {{ msg[1] }} {{ msg[2] }}</h2>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <div class ="warning">
+		<p class ="warning">il est possible que certains elements en soit pas renseigné ou afficher 'none' comme par exemple les "RTcores" et "CUDA_ZLUCDA" ou encore les "tensor_cores" present sur les dernieres générations de GPU (Nvidia RTX 2xxx,3xxx,4xxx,5xxx / AMD RX 5xxx 6xxx 7xxx 9xxx)</p>
+	</div>
+
+
+    <div id="block_info">
+        <div id="block_item_info">
+            <table>
+                <tbody>
+                    {% if resultats %}
+                        {% for msg in resultats %}
+                            {% for column in columns %}
+                                {% if column != 'id' %}
+                                    <tr>
+                                        <td>{{ column }}</td>  <!-- Affiche le nom de la colonne -->
+                                        <td>{{ msg[loop.index -1 ] }}</td>  <!-- Affiche la valeur correspondante -->
+                                    </tr>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+
+    
+
+        <div id = "block_img">
+                <img src="{{ url_for('static', filename='not_found_img.png') }}" alt="texte alternatif" width=30% height=30%/></td> 
+        </div>
+
+    </div>
+            
+
+
+
+            
+
+
+
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}

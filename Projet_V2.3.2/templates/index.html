@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}
+PC compar
+{% endblock %}
+
+
+{% block contenu %}
+
+	<div id="title_index">
+		<h2>Bienvenu sur PC part picker de wish !</h2>
+		<p>Rechercher un composant dans une des categories disponibles</p>
+		<br>
+	</div>
+
+	<div id ="nouveaute">
+		<h3>Dernières Nouveautés</h3>
+		
+		<div id ="resultats_nouveaute">
+			<!-- affichage des resultats  -->
+			<div id="block_nouveaute">
+			
+
+				{% if resultats %}
+					<table>
+						<caption>
+							GPU
+						</caption>
+						<tbody>
+							{% for result in resultats %}
+								
+								<tr>
+									<td>{{ result[0] }} {{ result[1] }}</td>
+									<td><a href="{{ url_for('info_gpu', item_name = result[1]) }}">more info</a></td>
+									<td><img src="{{ url_for('static', filename='not_found_img.png') }}" alt="texte alternatif" width=10% height=10%/></td>
+									
+									{% if favoris_list %}
+									
+										{% if result[1] in favoris_list %} 
+											<td>
+												<form action="{{ url_for('toggle_favorite', item_name=result[1], type_item='GPU') }}" method="POST">
+													<button type="submit" class="btn-favorite"><i class="fa-solid fa-heart"></i></button>
+												</form>
+											</td>
+										{% else %}
+											<td>
+												<form action="{{ url_for('toggle_favorite', item_name=result[1],type_item='GPU')}}" method="POST">
+													<button type="submit" class="btn-favorite"><i class="fa-regular fa-heart"></i></button>
+												</form>
+											</td>
+										{% endif %}
+									
+									{% else %}
+									<td>
+										<form action="{{ url_for('toggle_favorite', item_name=result[1],type_item='GPU')}}" method="POST">
+											<button type="submit" class="btn-favorite"><i class="fa-regular fa-heart"></i></button>
+										</form>
+									</td>
+									{% endif %}
+								</tr>
+								
+							{% endfor %}
+						</tbody>
+					</table>
+				{% endif %}
+			</div>
+			<div id="block_nouveaute">
+				{% if resultats1 %}
+					<table>
+						<caption>
+							CPU
+						</caption>
+						<tbody>
+							{% for result in resultats1 %}
+								<tr>
+									<td>{{ result[0] }} {{ result[1] }}</td>
+									<td><a href="{{ url_for('info_cpu', item_name = result[1],producter = result[0]) }}">more info</a></td>
+									<td><img src="{{ url_for('static', filename='not_found_img.png') }}" alt="texte alternatif" width=10% height=10%/></td>
+								
+									{% if favoris_list %}
+										{% if result[1] in favoris_list %} 
+											<td>
+												<form action="{{ url_for('toggle_favorite', item_name=result[1], type_item='CPU') }}" method="POST">
+													<button type="submit" class="btn-favorite"><i class="fa-solid fa-heart"></i></button>
+												</form>
+											</td>
+										{% else %}
+											<td>
+												<form action="{{ url_for('toggle_favorite', item_name=result[1],type_item='CPU') }}" method="POST">
+													<button type="submit" class="btn-favorite"><i class="fa-regular fa-heart"></i></button>
+												</form>
+											</td>
+										{% endif %}
+									
+									{% else %}
+									<td>
+										<form action="{{ url_for('toggle_favorite', item_name=result[1], type_item='CPU') }}" method="POST">
+											<button type="submit" class="btn-favorite"><i class="fa-regular fa-heart"></i></button>
+										</form>
+									</td>
+									{% endif %}
+									
+
+
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<div class ="warning">
+		<!--<i class="fa-solid fa-triangle-exclamation" style="color: #ff9100; font-size: 25px; margin-right: 10px; "></i>-->
+		<p class ="warning">La base de donnée des processeurs est assez ancienne certains processeur ne sont sûrement pas présent ! Certaines données ne sont peut etre pas correcte </p>
+	</div>
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
+
+
