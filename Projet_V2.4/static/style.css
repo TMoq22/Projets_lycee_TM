@@ -5,6 +5,7 @@
     --warning_color: #ff9100;
 
 }
+
 body {
     background: linear-gradient(0deg, #251d62 0%, #09112a 99%);
     margin: 0;
@@ -12,7 +13,6 @@ body {
     font-weight: 700;
 
 }
-
 
 html, body {
     min-height: 100%;
@@ -22,13 +22,52 @@ p {
     color: var(--color_text);
 }
 
-footer {
+
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
+
+/* FOOTER*/
+
+.footer_div{
     position: relative;
     padding-left: 10px;
     left: 0%;
     bottom: 0%;
 }
 
+#footer_main_info {
+    display: flex; /* Aligner les éléments horizontalement */
+    align-items: center; /* Centrer verticalement */
+    border-radius: .2rem;
+    margin: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    color: #e2e4e9d1;
+  
+}
+
+#footer_main_info svg {
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    flex-shrink: 0; /* Empêche l'icône de rétrécir */
+}
+
+#footer_main_info p {
+    margin: 0; /* Supprimer les marges par défaut du <p> */
+
+}
+
+#footer_main_info p::before { 
+    content: "\f05a";
+    font-family: "Font Awesome 6 Free"; 
+    font-weight: 900; 
+    color:  var(--color_text); 
+    margin-right: 10px; 
+}
+
+#footer_main_info a {
+    color: var(--color_text);
+    margin-left: 5px;
+    margin-right: 5px ;
+
+}
 
 header{
     position: sticky;
@@ -46,6 +85,7 @@ a:hover {
     color: #2c87c3;
 }
 
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
 
 /* Titres */
 .titleh2 {
@@ -61,6 +101,8 @@ a:hover {
     padding-left: 10px;
     color: var(--color_text);
 }
+
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
 
 /* Barre de navigation */
 .nav_bar {
@@ -89,7 +131,6 @@ nav {
     padding: 20px 10px 20px;
     display: flow-root;
 }
-
 
 nav ul {
     list-style-type: none;
@@ -132,6 +173,8 @@ nav a:hover {
 
 }
 
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
+
 /* Formulaires et filtres */
 input, select, button {
     border-radius: 5px;
@@ -142,6 +185,8 @@ select {
     color: black;
     padding: 0.2%;
 }
+
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
 
 /* BUTTON*/
 #myBtn {
@@ -159,7 +204,6 @@ color: white;
 cursor: pointer;
 padding: 10px;
 border-radius: 22px;
-
 }
 
 #myBtn:hover {
@@ -174,7 +218,6 @@ font-size: inherit;
 margin-right: 5px; 
 
 }
-
 
 #button_submit {
     min-width: 130px;
@@ -224,22 +267,68 @@ margin-right: 5px;
     box-shadow: 0 3px #212529;
     top: 1px;
 }
+
 #loadMoreBtn:active {
     box-shadow: 0 0 #212529;
     top: 5px;
 }
 
-.parent {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-.filtre_de_recherche { grid-area: 1 / 1 / 6 / 2; }
-#resultats { grid-area: 1 / 2 / 6 / 6; }
-    
+.btn-favorite{
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-style: none;
+    background-color: #0000;
+    padding: 5px;
+}
+
+.btn-favorite:hover{
+    /*box-shadow: -webkit-box-shadow: 0px 0px 6px 8px #2917FF; */
+    box-shadow: 0px 0px 1px 2px #2c87c3;
+    transition: transform .2s;
+}
+/* From Uiverse.io by cssbuttons-io */ 
+.button_unsubscribe {
+    --color1: #f01a0a;
+    --color2:#940e04;
+    background-color: var(--color2);
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--color1);
+
+    cursor: pointer;
+
+    border: 2px solid var(--color1);
+   
+    border-radius: 10px;
+    margin: 1%;
+    padding-top:2px;
+    padding-left: 6px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;  
+}
+
+.button_unsubscribe::before {
+    content: "\f2ed";
+    font-family: "Font Awesome 5 Free"; /* FontAwesome 5 */
+    font-weight: 900; /* Nécessaire pour afficher les icônes */
+    font-size: 1.2em;
+    padding-right: 4px;
+}
+
+.button_unsubscribe:hover {
+    color: var(--color2);
+    background-color: var(--color1);
+    border: 2px solid var(--color2);
+}
+
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
 
 /*filtre de recherche */
 .filtre_de_recherche {
@@ -263,8 +352,20 @@ margin-right: 5px;
     background-color: var(--warning_color);
 }
 
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
 
 /* Résultats */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+    
+.filtre_de_recherche { grid-area: 1 / 1 / 6 / 2; }
+#resultats { grid-area: 1 / 2 / 6 / 6; }
+   
 #resultats {
 
     min-width: -moz-available; 
@@ -289,6 +390,9 @@ margin-right: 5px;
     margin: 1%;
 }
 
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
+
+/*warning*/
 .warning p {
     display: flex; /* Aligner les éléments horizontalement */
     align-items: center; /* Centrer verticalement */
@@ -313,6 +417,8 @@ margin-right: 5px;
     font-size: 25px;
     margin-right: 10px; 
 }
+
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
 
 /* Nouveautés */
 #nouveaute {
@@ -342,6 +448,8 @@ margin-right: 5px;
     /*border-radius: 10px;*/
     margin: 1%;
 }
+
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
 
 /* Tableaux */
 table {
@@ -395,39 +503,8 @@ caption {
     display: contents;
 }
 
-#footer_main_info {
-    display: flex; /* Aligner les éléments horizontalement */
-    align-items: center; /* Centrer verticalement */
-    border-radius: .2rem;
-    margin: 10px;
-    font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-    color: #e2e4e9d1;
-  
-}
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
 
-#footer_main_info svg {
-    margin-right: 10px; /* Espacement entre l'icône et le texte */
-    flex-shrink: 0; /* Empêche l'icône de rétrécir */
-}
-
-#footer_main_info p {
-    margin: 0; /* Supprimer les marges par défaut du <p> */
-
-}
-#footer_main_info p::before { 
-    content: "\f05a";
-    font-family: "Font Awesome 6 Free"; 
-    font-weight: 900; 
-    color:  var(--color_text); 
-    margin-right: 10px; }
-
-
-#footer_main_info a {
-    color: var(--color_text);
-    margin-left: 5px;
-    margin-right: 5px ;
-
-}
 /* LOGIN */
 #login_form{
     margin-top:2%;
@@ -437,9 +514,11 @@ caption {
 
 
 }
+
 #login_form p {
     color: #11131d;
 }
+
 #required_info{
     font-size: 12px;
 }
@@ -447,10 +526,6 @@ caption {
 #icon_contact{
     font-size: 30px ;
 }
-
-
-
-
 
 #chose_action_login nav{
     position:relative;
@@ -466,28 +541,22 @@ caption {
     color: var(--color_text);
 }
 
-/* #learn_more{
-    color: var(--color_text);
-    
-}
-#learn_more i{
-    color: var(--color_text);
-}
-#learn_more a {
-    color: var(--color_text);
-}
-#learn_more h3 {
-    margin-bottom: 0px;
-    margin-top: 5px;
-}
-#learn_more ul {
-    margin-top: 5px;
-} */
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
+/* favoris page login */
 
+#view_favorites{
+    margin-left: 1%;
+    color: var(--color_text);
+    margin-top: 4%;
+}
+#view_favorites table {
+    color: #000000
+}
+
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
 
 /*formulaire login */
 .login-container {
- 
     font-family: 'Poppins', sans-serif;
     background: rgba(255, 255, 255, 0.1);
     padding: 2rem;
@@ -566,8 +635,9 @@ caption {
     margin-bottom: 10px;
 }
 
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
 
-
+/*tooltip discord */
 /*copier coller d'un site web */
 .tooltip {
     position: relative;
@@ -598,84 +668,7 @@ caption {
 }
 
 
-.btn-favorite{
-    border-radius: 5px;
-    margin-bottom: 10px;
-    border-style: none;
-    background-color: #0000;
-    padding: 5px;
-}
-
-.btn-favorite:hover{
-    /*box-shadow: -webkit-box-shadow: 0px 0px 6px 8px #2917FF; */
-    box-shadow: 0px 0px 1px 2px #2c87c3;
-    transition: transform .2s;
-}
-
-
-
-/* From Uiverse.io by cssbuttons-io */ 
-.button_unsubscribe {
-    --color1: #f01a0a;
-    --color2:#940e04;
-    background-color: var(--color2);
-
-    text-align: center;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    color: var(--color1);
-
-    cursor: pointer;
-
-    border: 2px solid var(--color1);
-   
-    border-radius: 10px;
-    margin: 1%;
-    padding-top:2px;
-    padding-left: 6px;
-    padding-right: 10px;
-    padding-bottom: 2px;
-
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
-    
-}
-
-.button_unsubscribe::before {
-    content: "\f2ed";
-    font-family: "Font Awesome 5 Free"; /* FontAwesome 5 */
-    font-weight: 900; /* Nécessaire pour afficher les icônes */
-    font-size: 1.2em;
-    padding-right: 4px;
-}
-
-.button_unsubscribe:hover {
-    color: var(--color2);
-    background-color: var(--color1);
-    border: 2px solid var(--color2);
-}
-
-#release_notes_download p::before { 
-    content: "\f019";
-    font-family: "Font Awesome 6 Free"; 
-    font-weight: 900; 
-    color: var(--color_text); 
-    font-size: 25px;
-    margin-right: 10px; 
-}
-
-#view_favorites{
-    margin-left: 1%;
-    color: var(--color_text);
-    margin-top: 4%;
-}
-#view_favorites table {
-    color: #000000
-}
-
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
 
 
 /* about us */
@@ -761,9 +754,7 @@ caption {
 }
 
 
-
-
-
+/* /#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\/#\*/
 
 /* error page css */
 
@@ -777,17 +768,10 @@ caption {
     margin-top: 10%;
 
 }
-/*
-#center_container a {
-    background-color: var(--color_text);
-    padding: 10px;
-    border-radius: 10px;
-    text-decoration: none;
-}*/
+
 #center_container h2{
     font-size: 50px;
 }
-
 
 #error_page_home_button {
     margin-top: 2%;
@@ -812,7 +796,6 @@ caption {
     cursor: pointer;
 }
   
-   
 @keyframes pulse {
     0% {
       box-shadow: 0 0 0 0 rgba(255, 60, 56, 0.7);
