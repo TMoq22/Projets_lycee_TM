@@ -25,5 +25,5 @@ mise a jours du projets Flask
 - Développement : Titouan Moquet 
 - Année scolaire : Term 2024-2025
 
-> Version : V2.3.2 (V2.4 serais plus approprié mais erreur de nommage)
+> Version : V2.4
 
