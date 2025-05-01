@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}
+PC compar
+{% endblock %}
+
+
+{% block contenu %}
+    <div  id="chose_action_login" >
+        {% if session['pseudo'] %}
+        <div id="button_container">
+            <p> vous êtes connecté en tant que : {{ session['pseudo'] }} !</p>   
+            <div id ="login_button">
+                {% if session['pseudo'] %}
+                    <a class="button_disconnect_admin" role="button" href="{{ url_for('disconnect') }}">se déconnecter</a>
+                    
+
+                    {% if session['autorisation'] == 0 %}
+                        <a class="button_disconnect_admin" role="button" href="{{ url_for('administrateur') }}">admin</a>
+                    {% endif %}
+
+                    {% if session['autorisation'] != 0 %}
+                        <a class="button_unsubscribe" role="button" href="{{ url_for('delete') }}">supprimer ce compte</a>
+                    {% endif %}
+
+                {% endif %}
+            </div>
+        </div>
+            
+        
+        {% else %}
+        <div class="login-container">
+            <h2>Connexion</h2>
+            <form method="post" action="{{ url_for('check_login') }}">
+                <input type="text" id="pseudo" name="pseudo" placeholder="Nom d'utilisateur" required>
+                <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+                <button type="submit">Se connecter</button>
+            </form>
+            <a href="{{ url_for('inscription') }}">inscription</a>
+        </div>
+        {% endif %}
+
+
+    
+    </div>
+    <div id="view_favorites">
+ 
+        {% if favoris_list != None or favoris_list != [] %}
+        <details>
+            <summary>Vos favoris</summary>
+            <table>
+                <tbody>
+                    <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">more info </th>
+                        <th scope="col">delete </th>
+                    </tr>
+                    {% if favoris_list %}
+                        {% for favoris in favoris_list %}
+                        <tr>
+                            <td>{{ favoris[0]}}</td>
+                           
+                            {% if favoris and favoris[1] == 'GPU' %}
+                            <!-- lien vers info (pb cpu ou gpu !!! )-->
+                                <td><a href="{{ url_for('info_gpu', item_name = favoris[0]) }}">voir</a></td> 
+                            {% else %}
+                                <td><a href="{{ url_for('info_cpu', item_name = favoris[0]) }}">voir</a></td> 
+                            {% endif %}
+                            <td>
+                                <form action="{{ url_for('toggle_favorite', item_name=favoris[0] ,type_item = favoris[1] )}}" method="POST">
+                                    <button type="submit" class="btn-favorite"><i class="fa-solid fa-trash-can"></i></button>
+                                </form>
+                            </td>
+                        {% endfor %}
+
+                    {% endif %}
+                </tbody>
+            </table>
+                
+        </details>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

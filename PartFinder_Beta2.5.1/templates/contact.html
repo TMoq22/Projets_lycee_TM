@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contacts
+{% endblock %}
+
+{% block contenu %}
+
+<div class="titleh2">
+    <h2>Contact</h2>
+</div>
+
+<div id = "margin_contacts">
+    <div id="learn_more">
+        <h3><i class="fa-solid fa-code"></i> Projet NSI terminal 2024-2025 Flask </h3>
+
+        <p>ce projet a été realiser dans le cadre de la specialité NSI en terminal.
+        le but etais de créé un site web utilisant <strong>Flask</strong> et <strong>Jinja2</strong> pouur créé un site interactif dans 
+        lequel l'utilisateur peut interagir avec une base de bonnées</p>
+
+        <a role="button" href="{{ url_for('site_map') }}">plan du site</a>
+        
+        <div id = "release_notes">
+            <h3><i class="fa-solid fa-file-code"></i> derniere modifications</h3>
+            <ul>
+                <li>amélioration css </li> 
+                <li>changement nom base de données `chat.db` -> `user.db`</li> 
+                <li>nettoyage code python </li> 
+                <li>ajout de données dans la base </li> 
+                <div id ="release_notes_download"><a href="#"><i class="fa-solid fa-download"></i> télécharger la note de version</a></div>
+            </ul>
+        </div>
+        <div id = "credits">
+            <h3><i class="fa-solid fa-address-card"></i> Crédits</h3>
+            <ul>
+                <li>Développement : Titouan Moquet </li>
+                <li>Année scolaire : Term 2024-2025</li>
+                <li><i class="fa-regular fa-font-awesome"></i> all ions come from <a href="https://fontawesome.com/">fontawesome.com</a> </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="icon_contact"> 
+        <a href="#"><i class="fa-brands fa-github"></i> Github du projet</a>
+        <a href="#"><i class="fa-brands fa-discord"></i> Discord du projet</a>
+    </div>
+
+    <div class ="warning">
+        <p>Ce projet est toujours en développement ,de nombreuses fonctionnalités ne sont donc pas encore disponibles
+            Le code n'est pas encore très bien organisé et nécessite encore de nombreuses modifications
+            Des modification serons apportées des que possibles
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block footer %}
+<div id="footer_main_info">
+	<p id = "footer_main_info">CSS/construction du site fortement inspiré de <a href="https://www.zonensi.fr/">ZoneNsi</a> et <a href="https://pcpartpicker.com/">PcPartPicker</a> </p>
+</div>
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="CSS Valide !" />
+    </a>
+</p>
+
+V2.4 Beta2.5.1
+{% endblock %}

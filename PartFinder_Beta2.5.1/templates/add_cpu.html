@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contacts
+{% endblock %}
+
+{% block contenu %}
+<div class="titleh2">
+    <h2>Ajouter un processeur</h2>
+</div>
+
+<div class="insert_value">
+    <form method="post" action="{{ url_for('check_insert_value') }}">
+        {% if list_name_column %}
+            {% for name in list_name_column %}
+                
+                    <label for={{name}}>{{name}}</label>
+                    <input type="text" id={{name}} name={{name}} required>
+                    <br>
+            {% endfor %}
+        {% endif %}
+        <button id="button_add" type="submit">Ajouter</button>
+    </form>
+</div>
+{% endblock %}
+
+ 
+ 
+ 
+ 
