@@ -6,7 +6,7 @@ Ce projet a été réalisé dans le cadre de la spécialité NSI. Il consiste en
 > Le Projet est toujours en cours de réalisation certains elements sont donc susceptibles de ne pas fonctionner
 > Le code n'est pas encore bien commenté et organisé
 > Des modifications seront apportées des que possible  
-> - derniere version ->  V2.3  -> `updates`
+> - derniere version ->  V2.4  -> `updates`
 
 > [!NOTE]
 > Note du projet (à venir)
