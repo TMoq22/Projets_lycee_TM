@@ -23,15 +23,16 @@ mise a jours du projets Flask
 ### dernieres modifications 
 - mdification du nom
 - modification nav bar 
-- modification page login
-- ajout de page de chargement
-- ajout de page de supression de compte (css a faire)
-- 
+- modification page login  
+  **(non publier pour le moment)**  
+- _ajout de page de chargement_
+- _ajout de page de supression de compte (css a faire)_
+  
   
 
 ## Crédits
 - Développement : Titouan Moquet 
 - Année scolaire : Term 2024-2025
 
-> Version : V2.4 - Beta2.5.2
+> Version : V2.4 - Beta2.5.2 (version non disponible pour le moment)
 
