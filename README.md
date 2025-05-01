@@ -20,14 +20,18 @@ mise a jours du projets Flask
 - ajout d'un bouton 'back to top'
 - ajout de 'title' pour certain bouton de la nav bar
 - reorganisation du css
+### dernieres modifications 
 - mdification du nom
 - modification nav bar 
 - modification page login
+- ajout de page de chargement
+- ajout de page de supression de compte (css a faire)
+- 
   
 
 ## Crédits
 - Développement : Titouan Moquet 
 - Année scolaire : Term 2024-2025
 
-> Version : V2.4
+> Version : V2.4 - Beta2.5.2
 
