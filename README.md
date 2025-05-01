@@ -19,7 +19,10 @@ mise a jours du projets Flask
 - ajout d'une page d'erreur pour restreindre l'acces à certaines ressources `add_cpu` `add_gpu` `administrateur` si l'utilisateur ne possede pas les permissions requises 
 - ajout d'un bouton 'back to top'
 - ajout de 'title' pour certain bouton de la nav bar
-- reorganisation du css 
+- reorganisation du css
+- mdification du nom
+- modification nav bar 
+- modification page login
   
 
 ## Crédits
