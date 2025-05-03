@@ -2,16 +2,13 @@
 ## Release notes
 
 ## modifications
-- modification du nom du site 
-- modification nav bar 
-- modification page login
+- ajout systeme pour afficher le mot de passe
+- modification page admin -> possibilité de gerer les utilisateurs
+- possibilité de se connecter au site depuis un autre pc du meme réseau
   
-
-### last update
-...
 
 ## Crédits
 - Développement : Titouan Moquet 
 - Année scolaire : Term 2024-2025
 
-> Version : Beta2.5.1
+> Version : Beta2.5.3
