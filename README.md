@@ -20,13 +20,17 @@ mise a jours du projets Flask
 - ajout d'un bouton 'back to top'
 - ajout de 'title' pour certain bouton de la nav bar
 - reorganisation du css
-### dernieres modifications 
+  **(beta 2.5.1)
 - mdification du nom
 - modification nav bar 
 - modification page login  
-  **(non publier pour le moment)**  
-- _ajout de page de chargement_
-- _ajout de page de supression de compte (css a faire)_
+  **(beta 2.5.2)**  
+- ajout de page de chargement
+- ajout de page de supression de compte (css a faire)
+- **(beta 2.5.3)**  
+- ajout systeme pour afficher le mot de passe
+- modification page admin -> possibilité de gerer les utilisateurs
+- possibilité de se connecter au site depuis un autre pc du meme réseau
   
   
 
