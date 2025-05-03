@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}
+PC compar
+{% endblock %}
+
+
+{% block contenu %}
+<div class="titleh2">
+    <h2>administration</h2>
+</div>
+
+<div id="section_info">
+
+
+</div>
+
+<div id="list_users">
+    <table>
+        <tbody>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">pseudo</th>
+                <th scope="col">email</th>
+                <th scope="col">id_autorisation</th>
+                <th scope="col">delete</th>
+                
+            </tr>
+            {% if users %}
+                {% for user in users %}  
+                    <tr>
+                        <td>{{ user[0]}}</td>  
+                        <td>{{ user[1] }}</td>  
+                        <td>{{ user[2] }}</td>
+                        <td>{{ user[3] }}</td>
+                        <td>
+                            {% if user[3] != 0 %}
+                            <form  method="POST" action="{{ url_for('delete_account_admin') }}">
+                                <input type="text" name="id_account" value = "{{user[0]}} ">
+                                <button type="submit" class="btn-favorite"><i class="fa-solid fa-trash-can"></i></button>
+                            </form>
+                            {% endif %}
+            
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+            
+        </tbody>
+    </table>
+
+
+
+</div>
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

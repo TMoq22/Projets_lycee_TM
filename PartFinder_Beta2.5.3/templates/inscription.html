@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block titre %}
+Inscription
+{% endblock %}
+
+{% block contenu %}
+<div class="login-container">
+    <h2>Inscription</h2>
+    <form method="post" action="{{ url_for('check_signin') }}">
+        <input type="text" id="pseudo" name="pseudo" placeholder="Nom d'utilisateur" required>
+
+        <div class="password-wrapper_2">
+            <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+            <i class="fas fa-eye togglePassword2" aria-hidden="true"></i>
+        </div>
+
+        <div class="password-wrapper_2">
+            <input type="password" id="password2" name="password2" placeholder="Verification mot de passe" required>
+            <i class="fas fa-eye togglePassword2" aria-hidden="true"></i>
+        </div>
+
+        <input type="email" id="email" name="email" placeholder="Email" required  autocomplete="off">
+        <button type="submit">S'inscrire</button>
+        <a href="{{ url_for('login') }}">Connexion</a>
+    </form>
+</div>
+
+
+{% endblock %}
