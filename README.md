@@ -19,12 +19,24 @@ mise a jours du projets Flask
 - ajout d'une page d'erreur pour restreindre l'acces à certaines ressources `add_cpu` `add_gpu` `administrateur` si l'utilisateur ne possede pas les permissions requises 
 - ajout d'un bouton 'back to top'
 - ajout de 'title' pour certain bouton de la nav bar
-- reorganisation du css 
+- reorganisation du css  
+  **(beta 2.5.1)**
+- mdification du nom
+- modification nav bar 
+- modification page login  
+  **(beta 2.5.2)**  
+- ajout de page de chargement
+- ajout de page de supression de compte (css a faire)
+- **(beta 2.5.3)**  
+- ajout systeme pour afficher le mot de passe
+- modification page admin -> possibilité de gerer les utilisateurs
+- possibilité de se connecter au site depuis un autre pc du meme réseau
+  
   
 
 ## Crédits
 - Développement : Titouan Moquet 
 - Année scolaire : Term 2024-2025
 
-> Version : V2.4
+> Version : V2.4 - Beta2.5.2 (version non disponible pour le moment)
 
