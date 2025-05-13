@@ -3,7 +3,7 @@ aperçu des projets que j'ai eu l'occasion de faire dans en NSI (et en arts plas
 
 > [!TIP]
 > Pour executer les programmes il est preferables de telecharger le repertoire complet 
-> Des readme.md et info.md sont present pour apporter des informations utiles pour une meilleur visualisation avec la mise en page je vous conseil des les lires depuis GitHub
+> Des readme.md et info.md sont présents pour apporter des informations utiles, pour une meilleure visualisation avec la mise en page, je vous conseille de les lire depuis GitHub
 
 ## :computer: NSI
 1. Projets de première
@@ -19,9 +19,7 @@ aperçu des projets que j'ai eu l'occasion de faire dans en NSI (et en arts plas
 
 ##  
 > [!NOTE]
-> + Des mises a jours plus régulière du projets Flask serons disponible dans la branche `updates` (version actuel 2.4 Beta2.5.6)
-> + Des readme.md et info.md sont présent pour apporter des informations utiles, pour une meilleur visualisation avec la mise en page je vous conseil des les lire depuis GitHub
-
+> + Des mises a jours plus régulière du projets Flask serons disponible dans la branche `updates` (version actuel 2.4 Beta2.5.8) (version final sera dispo dans la branche main)
 
 Lycée Auguste Pavie - Guingamp \
 Titouan Moquet \
