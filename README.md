@@ -30,7 +30,7 @@ mise a jours du projets Flask
 - **(beta 2.5.3)**  
 - ajout systeme pour afficher le mot de passe
 - modification page admin -> possibilité de gerer les utilisateurs
-- possibilité de se connecter au site depuis un autre pc du meme réseau
+- possibilité de se connecter au site depuis un autre pc du meme réseau   
 ...
 
 ## Crédits
