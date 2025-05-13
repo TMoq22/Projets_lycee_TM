@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}
+GPU search
+{% endblock %}
+
+{% block contenu %}
+<div class="titleh2">
+    <h2>Rechercher une carte graphique</h2>
+</div>
+
+{% if resultats_gpu %}
+    <span id="totalResults" data-total="{{ resultats_gpu|length }}" style="display: none;"></span>
+    <span id="currentLimit" data-limit="10" style="display: none;"></span>
+{% else %}
+    <span id="totalResults" data-total="0" style="display: none;"></span>
+{% endif %}
+<div class="parent">
+    <div class="filtre_de_recherche">
+        <!-- selection des filtres pour la recherche  -->
+        <form method="post" action="{{ url_for('check_filtre_gpu') }}">
+            <p>marques disponibles: </p>
+            <p>{% if marques %}{% for marque in marques %}{{marque[0]}} {% endfor %}{% endif %}</p>
+            <div class="search">
+                <input type="search" class="search__input" placeholder="Search..." name="filtre" {% if filtres[0] != '' %} value ='{{ filtres[0] }}' {% endif %} required >
+
+
+                <button class="search__button" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="statut_container">
+                {% if message[1] == "rouge" %}
+                    <div class="red_statut">
+                        <p>{{ message[0]}}</p>
+                    </div>
+                {% endif %}
+            </div>
+        </form>
+
+    </div>
+
+    <div id = "resultats">
+        <!-- affichage des resultats  -->
+            {% if resultats_gpu %}
+                <p>{{ resultats_gpu|length }} resultats </p>
+            {% endif %}
+
+        
+            <table>
+                <tbody>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Launch Date</th>
+                        <th scope="col">GPU Chip</th>
+                        <th scope="col">More info</th>
+                        <th scope="col"> </th>
+                        <th scope="col"> </th>
+                    </tr>
+                    {% if resultats_gpu %}
+                        {% for result in resultats_gpu[:max_items] %}
+                        <tr>
+                            <td>{{ result[3] }} {{ result[0] }}</td>
+                            <td>{{ result[1] }}</td>
+                            <td>{{ result[2] }}</td>
+                            <td><a href="{{ url_for('info_gpu', item_name=result[0]) }}">more info</a></td>
+  
+                            <td><img src="{{ url_for('static', filename='not_found_img.png') }}" alt="texte alternatif"  class="img_size"/></td> 
+
+                           
+                      
+                            {% if favoris_list %}
+                                {% if result[0] in favoris_list %} 
+                                    <td>
+                                        <form action="{{ url_for('toggle_favorite', item_name=result[0],type_item='GPU')}}" method="POST">
+                                            <button type="submit" class="btn-favorite"><i class="fa-solid fa-heart"></i></button>
+                                        </form>
+                                    </td>
+                                {% else %}
+                                    <td>
+                                        <form action="{{ url_for('toggle_favorite', item_name=result[0],type_item='GPU') }}" method="POST">
+                                            <button type="submit" class="btn-favorite"><i class="fa-regular fa-heart"></i></button>
+                                        </form>
+                                    </td>
+                                {% endif %}
+                            
+                            {% else %}
+                                <td>
+                                    <form action="{{ url_for('toggle_favorite', item_name=result[0],type_item='GPU' )}}" method="POST">
+                                        <button type="submit" class="btn-favorite"><i class="fa-regular fa-heart"></i></button>
+                                    </form>
+                                </td>
+                            {% endif %}
+                        </tr>
+                        {% endfor %}
+                    {% endif %}
+                </tbody>
+            </table>
+            <button id="loadMoreBtn">Afficher plus</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

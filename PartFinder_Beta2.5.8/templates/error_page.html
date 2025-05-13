@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contacts
+{% endblock %}
+
+{% block headstyle %}
+
+    <style>
+        header {
+        display: none;
+        }
+
+
+        .footer_div{
+            display: none;
+        }
+    </style>
+
+{% endblock %}
+
+
+{% block contenu %}
+
+
+<!-- page d'erreurs -->
+            
+{% if error == 403 %}
+    <div id = "center_container">
+        <h2><i class="fa-solid fa-ban"></i> 403 forbidden !</h2>
+        <p>vous n'avez pas l'autorisation requise pour acceder à cette resource </p> 
+        <a id ="error_page_home_button" role="button" href="{{ url_for('index') }}">revernir a l'accueil !</a>
+    </div>
+
+{% else %}
+    {% if error == 404 %}
+        <div id = "center_container">
+            <h2>🫠 404 not found ! 🫠</h2>
+            <p>Oops !</p>
+            <p>il semblerais que ce que vous cherchiez n'existe pas .</p> 
+            <img src="{{url_for('static', filename='dark_vador.png')}}" style="width: 10%;" title="Je suis ton père luke !" />
+
+            <p>you underestimate the power of the dark side</p> 
+            <a id ="error_page_home_button" role="button" href="{{ url_for('index') }}">revernir a l'accueil !</a>
+        </div>
+    
+    {% endif %}
+
+{% endif %}
+
+{% endblock %}
