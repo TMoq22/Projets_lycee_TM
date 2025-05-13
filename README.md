@@ -31,12 +31,11 @@ mise a jours du projets Flask
 - ajout systeme pour afficher le mot de passe
 - modification page admin -> possibilité de gerer les utilisateurs
 - possibilité de se connecter au site depuis un autre pc du meme réseau
-  
-  
+...
 
 ## Crédits
 - Développement : Titouan Moquet 
 - Année scolaire : Term 2024-2025
 
-> Version : V2.4 - Beta2.5.2 (version non disponible pour le moment)
+> Version : V2.4 - Beta2.5.8
 
