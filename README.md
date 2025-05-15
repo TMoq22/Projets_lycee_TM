@@ -3,12 +3,12 @@
 mise a jours du projets Flask
 
 ## Release notes
-
+<!--
 > [!WARNING]
 > Le Projet est toujours en cours de réalisation certainss elements sont donc susceptibles de ne pas fonctionner
 > Le code n'est pas encore bien commenté et organisé
 > Des modifications seront apportées dès que possible 
-
+-->
 ## modifications (comparaison V2) 
 - amélioration css 
 - modification de la page 'about us'
@@ -32,10 +32,11 @@ mise a jours du projets Flask
 - modification page admin -> possibilité de gerer les utilisateurs
 - possibilité de se connecter au site depuis un autre pc du meme réseau   
 ...
+  view more in Release notes
 
 ## Crédits
 - Développement : Titouan Moquet 
 - Année scolaire : Term 2024-2025
 
-> Version : V2.4 - Beta2.5.8
+> Version : V2.5 Release1.0
 
