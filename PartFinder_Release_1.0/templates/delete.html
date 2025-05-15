@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block titre %}
+Delete account
+{% endblock %}
+
+{% block contenu %}
+
+<div class="titleh2">
+    <h2>delete</h2>
+</div>
+
+{% if message[0] != "" %}
+<div class="statut_container">
+    {% if message[1] == "rouge" %}
+        <div class="red_statut">
+            <p>{{ message[0]}}</p>
+        </div>
+    {% else %}
+        <div class="green_statut">
+            <p>{{ message[0]}}</p>
+        </div>
+    {% endif %}
+</div>
+{% endif %}
+
+
+<div id="delete_container">
+    <form method="post" action="{{ url_for('delete_account') }}">
+        <p>supprimer un compte</p>
+        <label for="password">Password : </label>
+        <input type="password" id="password" name="password" required>*
+        <br>
+        <p>! attention action irreversible ! </p>
+        <button type="submit">supprimer votre compte</button>
+
+        <div id="required_info">
+            <p>* -> required</p>
+        </div>
+    </form>  
+</div>
+
+{% endblock %}

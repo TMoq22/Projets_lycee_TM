@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block titre %}
+Plan du site
+{% endblock %}
+
+
+{% block headstyle %}
+    {% if session['autorisation'] != 0 %}
+        <style>
+            .restricted-section {
+                z-index: -1;
+                position: relative;
+                filter: blur(1px);
+            }
+        </style>
+    {% endif %}
+{% endblock %}
+
+
+{% block contenu %}
+
+<div class="site-map-container">
+    <h2>Plan du site</h2>
+
+    <div class="links-section">
+        <a class="site-map-button" href="{{ url_for('index') }}">Accueil</a>
+        <a class="site-map-button" href="{{ url_for('searchCPU') }}">Recherche CPU</a>
+        <a class="site-map-button" href="{{ url_for('searchGPU') }}">Recherche GPU</a>
+        <a class="site-map-button" href="{{ url_for('login') }}">Connexion</a>
+        <a class="site-map-button" href="{{ url_for('contact') }}">À propos / Contact</a>
+        <a class="site-map-button" href="{{ url_for('site_map') }}">Plan du site</a>
+        <a class="site-map-button" href="{{ url_for('amd_data_base') }}">Page <img src="{{ url_for('static', filename='amd-header-logo.svg') }}" alt="AMD Logo" title="AMD Logo" width="50" class="d-inline-block align-text-top"  role="img">    </a>
+        <a class="site-map-button" href="{{ url_for('cgu') }}">CGU</a>
+    </div>
+
+    {% if session['pseudo'] %}
+    
+    
+
+
+    {% if session['autorisation'] != 0 %}
+        <div class ="warning">
+            <p class ="warning">Les liens ci-dessous sont désactivés car leurs pages associées ne sont pas fonctionnelles et nécessitent une autorisation spécifique</p>
+        </div>
+    {% endif %}
+
+
+        <div class="restricted-section">
+            <p class="restricted-text">🔒 Accès réservé :</p>
+            <a class="site-map-button" href="{{ url_for('add_cpu') }}">Ajouter CPU</a>
+            <a class="site-map-button" href="{{ url_for('add_gpu') }}">Ajouter GPU</a>
+        </div>
+
+        {% if session['autorisation'] == 0 %}
+            <p>truc</p>
+        {% endif %}
+    {% endif %}
+</div>
+
+
+{% endblock %}

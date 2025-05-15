@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+No acces
+{% endblock %}
+
+{% block contenu %}
+<div class="titleh2">
+    <h2>Ajouter un processeur</h2>
+</div>
+
+<div class="insert_value">
+    
+    <form method="post" > <!--action="{{ url_for('check_insert_value') }}"-->
+        
+        <!-- Manufacturer -->
+        <label for="manufacturer">Manufacturer:</label>
+        <input type="text" id="manufacturer" name="manufacturer" required>
+        <br>
+
+        <button type="submit">Insert</button>
+    </form>
+        
+        
+    
+</div>
+{% endblock %}
+
+ 
+ 
+ 
+ 
