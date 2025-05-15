@@ -1,0 +1,152 @@
+#chose_action_login {
+    padding: 2rem;
+    background-color: #1e1e2f;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+#chose_action_login span {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #00bcd4;
+}
+
+nav {
+    margin-bottom: 2rem;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav a.active {
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    padding: 0.7rem 1.5rem;
+    border-radius: 12px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+nav a.active:hover {
+    background: linear-gradient(135deg, #6366f1, #60a5fa);
+    transform: scale(1.05);
+}
+
+/* Login Form */
+.login-container {
+    background-color: #292940;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.login-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    background-color: #1e1e2f;
+    border: 1px solid #555;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.login-container button:hover {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    transform: scale(1.05);
+}
+
+.login-container a {
+    display: block;
+    margin-top: 1rem;
+    color: #60a5fa;
+    text-decoration: underline;
+}
+
+/* Unsubscribe button */
+.button_unsubscribe {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.button_unsubscribe:hover {
+    background: #ff6b6b;
+    transform: scale(1.05);
+}
+
+/* Favorites Table */
+#view_favorites {
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: #1e1e2f;
+    border-radius: 16px;
+}
+
+#view_favorites details summary {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#view_favorites table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+#view_favorites th, #view_favorites td {
+    padding: 1rem;
+    border-bottom: 1px solid #555;
+    text-align: center;
+}
+
+#view_favorites th {
+    background-color: #292940;
+    color: #00c6ff;
+}
+
+#view_favorites a {
+    color: #60a5fa;
+    text-decoration: underline;
+}
+
+.btn-favorite {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.btn-favorite:hover {
+    color: #ff6b6b;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+       <!-- <link href="{{ url_for('static', filename='font_awesome_css_local.css') }}" rel="stylesheet" type="text/css"> -->
+        <!--css FontAwesome en local abandonné -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" type="text/css">
+        
+        <link rel="icon" href="{{ url_for('static', filename='icon.png') }}"/>
+        
+        <!-- titre de la page modifiable -->
+        <title>{% block title %}{% endblock %}</title>
+
+        <!--pour l'ajout de style specifique a une page (AMD et page d'erreurs)-->
+        {% block headstyle %}
+        {% endblock %}
+    </head>
+    
+    
+    <body>
+        <!--nav bar qui possède un model responsif -->
+        <div class = "nav_bar">
+            <div class = "title">
+                    <h1>PartFinder</h1>
+            </div>
+            <!-- model responsif -->
+            <button class="burger" id="burger">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!--nav bar -->
+            <div  class = "link" >
+                <nav>
+                    <ul>
+                        <li><a class="active left home" role="button" href="{{ url_for('index') }}"><i class="fa-solid fa-house"></i> HOME</a></li>
+                        <li><a class="active left other" role="button" href="{{ url_for('searchCPU') }}"><i class="fa-solid fa-microchip"></i> CPU</a></li>
+                        <li><a class="active left other" role="button" href="{{ url_for('searchGPU') }}"><i class="fa-solid fa-microchip"></i> GPU</a></li>
+                    
+                        <li><a class="active left other" role="button" href="{{ url_for('amd_data_base') }}"><img src="{{ url_for('static', filename='amd-header-logo.svg') }}" alt="AMD Logo" title="AMD Logo" width="50" class="d-inline-block align-text-top"  role="img"></a></li>
+                        {% if session['autorisation'] == 0 %} 
+                            <!-- affichage seulement si l'utilisateur est l'admin -->
+                            <li><a class="active left other" role="button" href="{{ url_for('add_cpu') }}"><i class="fa-solid fa-plus"></i> add cpu</a></li>
+                            <li><a class="active left other" role="button" href="{{ url_for('add_gpu') }}"><i class="fa-solid fa-plus"></i> add gpu</a></li>
+                        {% endif %}   
+                        <li><a class="active right other" role="button" href="{{ url_for('login') }}" title="compte"><i  class="fa-solid fa-user" {% if session['pseudo'] %} style="color: #2c87c3;" {% endif %} ></i></a></li> <!--style="color: #ffffff;""-->
+                        <li><a class="active right other" role="button" href="{{ url_for('contact') }}">ABOUT US</a></li>                            
+
+                        <li><a class="active right other" role="button" href="https://discord.gg/ceg7zHeX7c"><i class="fa-brands fa-discord "></i></a></li>
+                        <li><a class="active right other" role="button" href="https://github.com/TMoq22/Projets_lycee_TM/tree/updates" title="GitHub"><i class="fa-brands fa-github "></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- container pour l'écran de chargement fonctionne avec js-->
+        {% if show_loader %}
+            <div id="loading-screen">
+                <p>Chargement</p>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        {% endif %}
+        <!--container principale ou les templates s'y ajoutent affichage via js -->
+        <div id="main-content" {% if show_loader %}style="display:none;"{% endif %}>
+            <!--boutton  pour le routour en haut de la page : js -->
+            <button onclick="topFunction()" id="myBtn" title="Go to top">back to top</button>
+            {% block contenu %}
+            
+
+            {% endblock %}
+        </div>    
+        <!--footer modifiable dans les templates-->
+        <div class="footer_div">
+            <footer class = "footers"> 
+                {% block footer %}
+                {% endblock %}   
+            </footer>
+        </div>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </body>
+</html>
+
+
