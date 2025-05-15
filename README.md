@@ -9,9 +9,9 @@ aperçu des projets que j'ai eu l'occasion de faire dans en NSI (et en arts plas
 1. Projets de première
 2. Projet Pygame : creation d'un jeu video en Python
 3. Projet Flask : creation d'un site web avec requete SQL en Python 
-
+<!--
 > (le projet Flask est toujours en cours de realisation)
-
+-->
 ## :pencil2: Arts plastique 
 
 1. Bande Dessinée sur le thème de l'immigration
