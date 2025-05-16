@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}
+Connexion - PartFinder
+{% endblock %}
+
+
+{% block contenu %}
+    <!-- container pour l'affichage des message d'erreur et info (lié avec js)-->
+    {% if message[0] != "" %}
+    <div class="statut_container">
+        {% if message[1] == "rouge" %}
+            <div class="red_statut">
+                <p>{{ message[0]}}</p>
+            </div>
+        {% else %}
+            <div class="green_statut">
+                <p>{{ message[0]}}</p>
+            </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <div  id="chose_action_login" >
+        <!-- bar d'action affiché seulement si l'utilisateur est connecté -->
+        {% if session['pseudo'] %}
+        <div id="button_container">
+            <p> vous êtes connecté en tant que : {{ session['pseudo'] }} !</p>   
+            <div id ="login_button">
+                {% if session['pseudo'] %}
+                    <a class="button_disconnect_admin" role="button" href="{{ url_for('disconnect') }}">se déconnecter</a>
+                    <a class="button_disconnect_admin" role="button" href="{{ url_for('update_account') }}">modifier votre mot de passe</a>
+
+                    {% if session['autorisation'] == 0 %}
+                        <a class="button_disconnect_admin" role="button" href="{{ url_for('administrateur') }}">admin</a>
+                    {% endif %}
+
+                    {% if session['autorisation'] != 0 %}
+                        <a class="button_unsubscribe" role="button" href="{{ url_for('delete') }}">supprimer ce compte</a>
+                    {% endif %}
+
+                {% endif %}
+            </div>
+        </div>
+            
+        <!-- container de connexion -->
+        {% else %}
+            <div class="login-container">
+                <h2>Connexion</h2>
+                <form method="post" action="{{ url_for('check_login') }}">
+                    <input type="text" id="pseudo" name="pseudo" placeholder="Nom d'utilisateur" required>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+                        <i class="fas fa-eye" id="togglePassword" aria-hidden="true"></i>
+                    </div>
+
+                    <button type="submit">Se connecter</button>
+                </form>
+                <a href="{{ url_for('inscription') }}">inscription</a>
+            </div>
+        {% endif %}
+    </div>
+
+    <div id="view_favorites">
+    
+        {% if favoris_list == None or favoris_list == [] %}
+        <p style="display: none; ">rien</p>
+        <!-- fais comme ça car ne fonctionnais pas correctement autrement -->
+        {% else %}
+        <details>
+            <summary>Vos favoris</summary>
+            <table>
+                <tbody>
+                    <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">more info </th>
+                        <th scope="col">delete </th>
+                    </tr>
+                    {% if favoris_list %}
+                        {% for favoris in favoris_list %}
+                        <tr>
+                            <td>{{ favoris[0]}}</td>
+                           
+                            {% if favoris and favoris[1] == 'GPU' %}
+                            <!-- comme 2 bases de données, il faut vérifier dans quelle base de données chercher -->
+                                <td><a href="{{ url_for('info_gpu', item_name = favoris[0]) }}">voir</a></td> 
+                            {% else %}
+                                <td><a href="{{ url_for('info_cpu', item_name = favoris[0]) }}">voir</a></td> 
+                            {% endif %}
+                            <td>
+                                <form action="{{ url_for('toggle_favorite', item_name=favoris[0] ,type_item = favoris[1] )}}" method="POST">
+                                    <button type="submit" class="btn-favorite"><i class="fa-solid fa-trash-can"></i></button>
+                                </form>
+                            </td>
+                        {% endfor %}
+                    {% endif %}
+                </tbody>
+            </table>
+                
+        </details>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
