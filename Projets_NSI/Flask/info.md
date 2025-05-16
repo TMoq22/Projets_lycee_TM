@@ -16,6 +16,13 @@ Ce projet a été réalisé dans le cadre de la spécialité NSI. Il consiste en
 - **Base de données** : SQLite, SQL
 - **Outils** : Flask, Jinja2
 
+## ​⚠️ ​Module obligatoire ​⚠️​ 
+- flask
+- sqlite3
+  (à partir de la 1.1)
+- requests
+- markdown
+  
 ## Fonctionnalités principales
 - Page d'accueil dynamique
 - Système de gestion des utilisateurs (inscription, connexion)
