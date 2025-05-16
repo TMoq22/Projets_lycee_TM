@@ -18,7 +18,7 @@ Ce projet a été réalisé dans le cadre de la spécialité NSI. Il consiste en
 
 ## ​⚠️ ​Module obligatoire ​⚠️​ 
 - flask
-- sqlite3
+- sqlite3   
   (à partir de la 1.1)
 - requests
 - markdown
