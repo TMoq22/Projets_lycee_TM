@@ -1,64 +1,78 @@
 # Projets_lycee_TM
 
-mise a jours du projets Flask
+Mise à jour du projet Flask
 
-## Release notes
-<!--
+## Release Notes
+
 > [!WARNING]
-> Le Projet est toujours en cours de réalisation certainss elements sont donc susceptibles de ne pas fonctionner
-> Le code n'est pas encore bien commenté et organisé
-> Des modifications seront apportées dès que possible 
--->
-## modifications (comparaison V2) 
-- amélioration css 
-- modification de la page 'about us'
-- changement nom base de données `chat.db` -> `user.db`
-- nettoyage code python
-- ajout de page d'erreur personnalisé 
-- modification css page `about us`
-- ajout d'une page d'erreur pour restreindre l'acces à certaines ressources `add_cpu` `add_gpu` `administrateur` si l'utilisateur ne possede pas les permissions requises 
-- ajout d'un bouton 'back to top'
-- ajout de 'title' pour certain bouton de la nav bar
-- reorganisation du css  
-### Beta 2.5.1
-- mdification du nom
-- modification nav bar 
-- modification page login  
-### Beta 2.5.2
-- ajout de page de chargement
-- ajout de page de supression de compte (css a faire)
-### Beta 2.5.3
-- ajout systeme pour afficher le mot de passe
-- modification page admin -> possibilité de gerer les utilisateurs
-- possibilité de se connecter au site depuis un autre pc du meme réseau   
-### Beta 2.5.4
-- ajout message quand aucun resultat est trouvé
-- ajout message quand mot de passe incorrecte 
-- idem page inscription 
-- modification de l'input des pages search_...
-- modification css tableau 
-- page AMD (css + html) 
-(__⚠️ le css de cette page est sur un autre fichier__)
-> la page AMD est une de mes préférées, mais aussi celle sur laquelle le CSS a été le plus compliqué à faire
-### Beta 2.5.6
-- ajout systeme de modification de mot de passe 
-- ajout de message d'erreur dans la page admin et delete
-- indexage de la page amd dans le plan du site 
+> Le projet est toujours en cours de réalisation. Certains éléments sont donc susceptibles de ne pas fonctionner.
+> Le code n'est pas encore bien commenté et organisé.
+> Des modifications seront apportées dès que possible.
 
-### Beta2.5.8 / Release 1.0
-- rename js.js -> script.js
-- fix du système pour voir le mot de passe du la page modification de mot de passe 
-- commentaires base.html
-- commentaires js
-- correction de certaines fautes
+---
 
-### Release1.1
-- correction de fautes
-- légère modification de CSS
+## Version 1.1 (Beta 2.5.8)
+
+- Correction de fautes
+- Légère modification de CSS
+
+## Version 1.0 (Beta 2.5.8)
+
+- Rename `js.js` -> `script.js`
+- Fix du système pour voir le mot de passe sur la page modification de mot de passe 
+- Commentaires dans `base.html`
+- Commentaires dans `script.js`
+- Correction de certaines fautes
+
+## Version Beta 2.5.6
+
+- Ajout système de modification de mot de passe 
+- Ajout de messages d'erreur dans la page admin et delete
+- Indexage de la page AMD dans le plan du site 
+
+## Version Beta 2.5.4
+
+- Ajout message quand aucun résultat est trouvé
+- Ajout message quand mot de passe incorrect
+- Idem page inscription 
+- Modification de l'input des pages `search_...`
+- Modification CSS tableau 
+- Page AMD (CSS + HTML)  
+  (__⚠️ le CSS de cette page est sur un autre fichier__)  
+> La page AMD est une de mes préférées, mais aussi celle sur laquelle le CSS a été le plus compliqué à faire
+
+## Version Beta 2.5.3
+
+- Ajout système pour afficher le mot de passe
+- Modification page admin : possibilité de gérer les utilisateurs
+- Possibilité de se connecter au site depuis un autre PC du même réseau
+
+## Version Beta 2.5.2
+
+- Ajout de page de chargement
+- Ajout de page de suppression de compte (CSS à faire)
+
+## Version Beta 2.5.1
+
+- Modification du nom
+- Modification nav bar 
+- Modification page login  
+
+## Modifications générales (Comparaison V2)
+
+- Amélioration CSS 
+- Modification de la page 'About Us'
+- Changement nom base de données `chat.db` -> `user.db`
+- Nettoyage code Python
+- Ajout de pages d'erreur personnalisées
+- Restriction d'accès à certaines ressources (`add_cpu`, `add_gpu`, `administrateur`) si l'utilisateur ne possède pas les permissions requises
+- Ajout d'un bouton 'Back to top'
+- Ajout de 'title' pour certains boutons de la nav bar
+- Réorganisation du CSS  
 
 ## Crédits
+
 - Développement : Titouan Moquet 
 - Année scolaire : Term 2024-2025
 
-> Version : V2.5 Release1.1
-
+> Version actuelle : V2.5 Release 1.1
