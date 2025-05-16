@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block headstyle %}
+<link href="{{ url_for('static', filename='amd-page-style.css') }}" rel="stylesheet" type="text/css">
+<!--<link rel="icon" type="image/vnd.microsoft.icon" href="https://www.amd.com/content/dam/code/images/favicon/favicon.ico">-->
+{% endblock %}
+<!-- cette page est largement copier  -->
+
+
+{% block title %}
+AMD - PartFinder
+{% endblock %}
+
+
+{% block contenu %}
+<div class="container_image">
+    <picture>
+        <source media="(max-width: 575px)" src="{{ url_for('static', filename='/2922918-radeon-banner-m.avif') }}">
+        <source media="(max-width: 1199px)" src="{{ url_for('static', filename='2922918-radeon-banner.avif') }}">
+        <source media="(min-width: 1200px)" src="{{ url_for('static', filename='2922918-radeon-banner.avif') }}">
+        
+        <img class="banner" loading="lazy" src="{{ url_for('static', filename='2922918-radeon-banner.avif') }}" class="" alt="" role="presentation">
+    </picture>
+    <div class="title_container">
+        <h1 class="title-amd">Spécifications des produits <img src="{{ url_for('static', filename='amd-header-logo.svg') }}" alt="AMD Logo" title="AMD Logo"  class="amd-logo-svg"  role="img"></h1>
+    </div>
+</div>
+
+
+<div id="title-amd-page">
+    <p>Contrairement à d'autres fabricants, AMD met à disposition ses bases de données produits, accessibles à tous.</p>
+    <p>Voici des liens directs pour y accéder :</p>
+</div>
+
+<div class="amd-link">
+    <a class="amd-link-common amd-link-with-bg redirects-to-amd-com" href="https://www.amd.com/fr/products/specifications.html" target="_blank">
+        <div class="blur"><p>Voir tous les produits AMD</p></div>
+    </a>
+
+    <div id="other-link">
+        <a class="amd-link-common amd-link-with-bg redirects-to-amd-cpu" href="https://www.amd.com/fr/products/specifications/processors.html" target="_blank">
+        <div class="blur"><p>Voir les processeurs AMD</p></div>
+        </a>
+        <a class="amd-link-common amd-link-with-bg redirects-to-amd-gpu" href="https://www.amd.com/fr/products/specifications/graphics.html" target="_blank">
+        <div class="blur" ><p>Voir les cartes graphiques AMD</p></div>
+        </a>
+        <a class="amd-link-common amd-link-with-bg redirects-to-amd-cpu-emb" href="https://www.amd.com/fr/products/specifications/embedded.html" target="_blank">
+        <div class="blur"><p>Voir les processeurs intégrés AMD</p></div>
+        </a>
+    </div>
+</div>
+
+
+<p style="text-align: center; margin-top: 2rem;">⚠️ Cette page existe car de nombreux composants sont manquants dans la base de données locale. Les ajouter manuellement serait très long.</p>
+
+
+<div class="copyright_container">
+    <span class="copyright">
+       <p> Toutes les images, données, logos et noms sont la propriété d'© Advanced Micro Devices, Inc. 2025 </p>
+    </span>
+</div>
+
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
