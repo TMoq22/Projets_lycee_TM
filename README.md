@@ -11,7 +11,7 @@ Mise à jour du projet Flask
 
 ---
 
-## Version 1.1 (Beta 2.5.8)
+## Version 1.1
 
 - Correction de fautes
 - Légère modification de CSS
