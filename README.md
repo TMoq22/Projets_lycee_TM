@@ -15,6 +15,7 @@ Mise à jour du projet Flask
 
 - Correction de fautes
 - Légère modification de CSS
+- Ajout récupération du dernier release note depuis GitHub et l'affiche dans la page `contact`
 
 ## Version 1.0 (Beta 2.5.8)
 
