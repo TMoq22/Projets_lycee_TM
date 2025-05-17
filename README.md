@@ -3,12 +3,12 @@
 Mise à jour du projet Flask
 
 ## Release Notes
-
+<!--
 > [!WARNING]
 > Le projet est toujours en cours de réalisation. Certains éléments sont donc susceptibles de ne pas fonctionner.
 > Le code n'est pas encore bien commenté et organisé.
 > Des modifications seront apportées dès que possible.
-
+-->
 ---
 
 ## Version 1.1
