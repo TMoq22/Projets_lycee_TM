@@ -45,7 +45,7 @@ Mise à jour du projet Flask
 - Modification CSS tableau 
 - Page AMD (CSS + HTML)  
   (__⚠️ le CSS de cette page est sur un autre fichier__)  
-> La page AMD est une de mes préférées, mais aussi celle sur laquelle le CSS a été le plus compliqué à faire
+<!-- > La page AMD est une de mes préférées, mais aussi celle sur laquelle le CSS a été le plus compliqué à faire-->
 
 ## Version Beta 2.5.3
 
