@@ -1,6 +1,8 @@
 # Projets_lycee_TM
 
-Mise à jour du projet Flask
+Mise à jour du projet Flask   
+
+---
 
 ## Release Notes
 <!--
@@ -9,7 +11,7 @@ Mise à jour du projet Flask
 > Le code n'est pas encore bien commenté et organisé.
 > Des modifications seront apportées dès que possible.
 -->
----
+
 ## Version 1.2
 
 - Correction d'un bug d'affichage de la page login lors de la connexion (affichage du tableau)
