@@ -13,6 +13,7 @@ Mise à jour du projet Flask
 ## Version 1.2
 
 - Correction d'un bug d'affichage de la page login lors de la connexion (affichage du tableau)
+- modification d'un lien de la page contact (vers README)
   
 ## Version 1.1
 - Correction de fautes
