@@ -19,7 +19,7 @@ aperçu des projets que j'ai eu l'occasion de faire dans en NSI (et en arts plas
 
 ##  
 > [!NOTE]
-> + Des mises à jour plus régulières du projet Flask seront disponibles dans la branche `updates` (version actuelle : Release1.2) (la version rendu est disponible dans la branche main (Release1.1) )
+> Des mises à jour plus régulières du projet Flask seront disponibles dans la branche `updates` (version actuelle : Release1.2) (la version rendu est disponible dans la branche main (Release1.1) )
 
 Lycée Auguste Pavie - Guingamp \
 Titouan Moquet \
