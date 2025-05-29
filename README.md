@@ -1,18 +1,23 @@
 # Projets_lycee_TM
 
-Mise à jour du projet Flask
+Mise à jour du projet Flask   
+
+---
 
 ## Release Notes
-
+<!--
 > [!WARNING]
 > Le projet est toujours en cours de réalisation. Certains éléments sont donc susceptibles de ne pas fonctionner.
 > Le code n'est pas encore bien commenté et organisé.
 > Des modifications seront apportées dès que possible.
+-->
 
----
+## Version 1.2
 
+- Correction d'un bug d'affichage de la page login lors de la connexion (affichage du tableau)
+- Modification d'un lien de la page contact (vers README)
+  
 ## Version 1.1
-
 - Correction de fautes
 - Légère modification de CSS
 - Ajout récupération du dernier release note depuis GitHub et l'affiche dans la page `contact`
@@ -40,7 +45,7 @@ Mise à jour du projet Flask
 - Modification CSS tableau 
 - Page AMD (CSS + HTML)  
   (__⚠️ le CSS de cette page est sur un autre fichier__)  
-> La page AMD est une de mes préférées, mais aussi celle sur laquelle le CSS a été le plus compliqué à faire
+<!-- > La page AMD est une de mes préférées, mais aussi celle sur laquelle le CSS a été le plus compliqué à faire-->
 
 ## Version Beta 2.5.3
 
